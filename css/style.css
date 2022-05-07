@@ -49,6 +49,7 @@ body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
   background-color: var(--bg-color);
+  scroll-behavior: smooth;
 }
 
 ::selection {
@@ -71,6 +72,7 @@ ul {
   max-width: 75rem;
   padding: 0 1.5rem;
   margin: 0 auto;
+  /* scroll-snap-align: center; */
 }
 .logo{
   margin-right: 3.5rem;  
