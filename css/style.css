@@ -361,6 +361,7 @@ header .logo{
   justify-content:center;
   cursor: pointer;
   transition: 0.5s transform;
+  box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
 }
 
 .about-card:nth-child(1){
