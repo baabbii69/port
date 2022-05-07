@@ -21,6 +21,8 @@ let sr = ScrollReveal({
 })
 sr.reveal(".showcase-info", {delay:500});
 sr.reveal(".showcase-image", {origin:"top", delay:600});
+sr.reveal(".about-grid", {origin:"top",delay:100});
+sr.reveal(".about-info", { delay:200});
 /* --------------- Skills Progress Bar Animation --------------- */
 function hasReached(el){
     let topPosition = el.getBoundingClientRect().top;
