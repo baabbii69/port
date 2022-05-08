@@ -558,16 +558,21 @@ header .logo {
   column-gap: 2rem;
   row-gap: 4.4rem;
 }
+
 .srv-card {
   background-color: var(--bg-color-2);
   border-radius: 5px;
   padding: 2.5rem 1.8rem;
   display: flex;
   flex-direction: column;
+  transition: 0.3s ease-in-out;
   align-items: flex-start;
   justify-content: space-between;
   min-height: 240px;
   box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+}
+.srv-card:hover {
+  transform: scale(1.1);
 }
 .srv-card h3 {
   color: var(--bg-color-0-dark);
@@ -605,6 +610,7 @@ header .logo {
   cursor: pointer;
   transition: 0.5s transform;
 }
+
 .srv-card .ca {
   margin-bottom: -2.5rem;
   margin-top: 2.5rem;
@@ -691,6 +697,7 @@ header .logo {
 
 .modal-body {
   padding: 10px 20px;
+  margin-bottom: 15px;
 }
 .modal-body i{
   color: var(--bg-color-0);
