@@ -39,7 +39,7 @@ sr.reveal(".about-grid", {origin:"top",delay:100});
 sr.reveal(".about-info", { delay:200});
 sr.reveal(".triangle", { delay:200});
 sr.reveal(".box-heading", { delay:50});
-sr.reveal(".services-grid", { delay:50});
+sr.reveal(".services-grid", {origin:"top", delay:50});
 sr.reveal(".services .sub-heading", { delay:50});
 sr.reveal(".services .heading", { delay:50});
 sr.reveal(".services .text", { delay:50});
