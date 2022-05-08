@@ -673,9 +673,15 @@ header .logo {
   cursor: pointer;
   color: var(--bg-color-0);
 }
+.modal li{
+  color: var(--text-color);
+  padding-top: 10px;
+}
 .modal-header h1{
   color: var(--bg-color-0);
+  font-weight: 500;
 }
+
 .modal::after {
   position: absolute;
   content: '';
@@ -685,8 +691,8 @@ header .logo {
 
 .modal-body {
   padding: 10px 20px;
-
-}.modal-body i{
+}
+.modal-body i{
   color: var(--bg-color-0);
   padding-right: 10px;
 }
