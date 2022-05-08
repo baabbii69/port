@@ -12,6 +12,7 @@ window.addEventListener("scroll", () => {
     if(!skillsPlayed) skillscounter();
     if(!msPlayed) ml_counter();
 })
+
 function updatecount(num, maxNum){
     let currentNum = +num.innerText;
 
@@ -86,6 +87,35 @@ function ml_counter(){
         }, 500);
     })
 }
+
+// modal
+const modals = document.querySelectorAll('.modal');
+const modalTitle = document.querySelector('.modal-header h1');
+const modalBody = document.querySelector('.modal-body ul');
+const closeBtns =  document.querySelectorAll('.modal-header button');
+const openBtns = document.querySelectorAll('.viewMore')
+
+function closeModals () {
+    modals.forEach((modal) => modal.classList.remove('toggleModal'))
+} 
+
+closeBtns.forEach((btn, idx) => 
+    btn.addEventListener('click', () => {
+        closeModals()
+        modals[idx].classList.remove('toggleModal')
+    }))
+
+
+openBtns.forEach((btn, idx) => {
+    btn.addEventListener('click', (e) =>  {
+        e.preventDefault()
+        closeModals()
+        modals[idx].classList.add('toggleModal')
+    })
+})
+
+
+
 /* --------------- Portfolio Filter Animation --------------- */
 
 /* --------------- Modal Pop Up Animation Animation --------------- */
