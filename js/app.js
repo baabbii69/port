@@ -39,6 +39,10 @@ sr.reveal(".about-grid", {origin:"top",delay:100});
 sr.reveal(".about-info", { delay:200});
 sr.reveal(".triangle", { delay:200});
 sr.reveal(".box-heading", { delay:50});
+sr.reveal(".services-grid", { delay:50});
+sr.reveal(".services .sub-heading", { delay:50});
+sr.reveal(".services .heading", { delay:50});
+sr.reveal(".services .text", { delay:50});
 /* --------------- Skills Progress Bar Animation --------------- */
 function hasReached(el){
     let topPosition = el.getBoundingClientRect().top;
@@ -73,7 +77,7 @@ let msPlayed = false;
 function ml_counter(){
     if(!hasReached(ms_section)) return;
     msPlayed = true;
-    
+
     ms_counters.forEach(ctr => {
         let target = +ctr.dataset.target;
 
