@@ -556,6 +556,7 @@ header .logo{
 }
 
 .services-grid{
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 2rem;
@@ -580,6 +581,25 @@ header .logo{
   margin-top: 1.5rem;
   
 }
+.srv-card:nth-child(2){
+  transform:translateY(2.2rem);
+}
+.srv-card:nth-child(3){
+  transform:translateY(-2.2rem);
+}
+.services-grid::before{
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 15px solid var(--bg-color-0-dark);
+  z-index: -1;
+  opacity: 0.07;
+
+}
 .card-desc{
 
   /* background-color: var(--bg-color-2); */
@@ -598,6 +618,19 @@ header .logo{
 }
 .iconn{
   color: var(--bg-color-0);
+}
+.services .triangle{
+  top: 100%;
+  left: 27%;
+  position: absolute;
+  transform: translate(-50%, -100%);
+}
+.services .square{
+  top: 75%;
+  left: -2%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: -1;
 }
 /* --------------- Portfolio Section Styling --------------- */
 
