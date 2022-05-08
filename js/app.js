@@ -5,9 +5,23 @@ const first_skill = document.querySelector(".skill:first-child");
 const sk_counter = document.querySelectorAll(".counter span");
 const progress_bars = document.querySelectorAll(".skills svg circle");
 
+const ms_section = document.querySelector(".milestones");
+const ms_counters = document.querySelectorAll(".number span");
+
 window.addEventListener("scroll", () => {
     if(!skillsPlayed) skillscounter();
+    if(!msPlayed) ml_counter();
 })
+function updatecount(num, maxNum){
+    let currentNum = +num.innerText;
+
+    if(currentNum < maxNum){
+        num.innerText = currentNum + 1;
+        setTimeout(() => {
+            updatecount(num, maxNum);
+        }, 12);
+    }
+}
 /* --------------- Sticky Navbar --------------- */
 function stickyNavbar(){
     header.classList.toggle("scrolled", window.pageYOffset >100);
@@ -32,16 +46,6 @@ function hasReached(el){
     if(window.innerHeight >= topPosition + el.offsetHeight)  return true;
     return false;
 }
-function updatecount(num, maxNum){
-    let currentNum = +num.innerText;
-
-    if(currentNum < maxNum){
-        num.innerText = currentNum + 1;
-        setTimeout(() => {
-            updatecount(num, maxNum);
-        }, 12);
-    }
-}
 
 let skillsPlayed = false;
 
@@ -65,7 +69,19 @@ function skillscounter(){
     );
 }
 /* --------------- Services Counter Animation --------------- */
+let msPlayed = false;
+function ml_counter(){
+    if(!hasReached(ms_section)) return;
+    msPlayed = true;
+    
+    ms_counters.forEach(ctr => {
+        let target = +ctr.dataset.target;
 
+        setTimeout(() => {
+            updatecount(ctr, target);
+        }, 500);
+    })
+}
 /* --------------- Portfolio Filter Animation --------------- */
 
 /* --------------- Modal Pop Up Animation Animation --------------- */
