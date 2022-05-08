@@ -534,7 +534,7 @@ header .logo{
 .milestones {
   display: grid;
   width: 100%;  
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(4,1fr);
   align-items: center;
   text-align: flex-start;
   justify-content: center;
@@ -563,7 +563,7 @@ header .logo{
 }
 .srv-card{
   background-color: var(--bg-color-2);
-  border-radius: 15px;
+  border-radius: 5px;
   padding: 2.5rem 1.8rem;
   display: flex;
   flex-direction: column;
