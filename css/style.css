@@ -570,10 +570,9 @@ header .logo {
   justify-content: space-between;
   min-height: 240px;
   box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+  transition: 0.3s transform;
 }
-.srv-card:hover {
-  transform: scale(1.1);
-}
+
 .srv-card h3 {
   color: var(--bg-color-0-dark);
   font-weight: 500;
@@ -581,12 +580,18 @@ header .logo {
   padding-top: 2rem;
   margin-top: 1.5rem;
 }
+.srv-card:hover {
+  transform: scale(1.07);
+}
+
 .srv-card:nth-child(2) {
   transform: translateY(2.2rem);
 }
+
 .srv-card:nth-child(3) {
   transform: translateY(-2.2rem);
 }
+
 .services-grid::before {
   content: "";
   position: absolute;
@@ -600,7 +605,6 @@ header .logo {
   opacity: 0.07;
 }
 .card-desc {
-  /* background-color: var(--bg-color-2); */
   width: 100%;
   height: 100%;
   display: flex;
@@ -648,7 +652,6 @@ header .logo {
   transition: 0.3s ease-in-out;
 }
 
-
 .modal.toggleModal {
   transition: 0.3s ease-in-out;
   opacity: 1;
@@ -679,19 +682,20 @@ header .logo {
   cursor: pointer;
   color: var(--bg-color-0);
 }
-.modal li{
+.modal li {
   color: var(--text-color);
   padding-top: 10px;
 }
-.modal-header h1{
+.modal-header h1 {
   color: var(--bg-color-0);
   font-weight: 500;
 }
 
 .modal::after {
   position: absolute;
-  content: '';
-  height: 100%;width: 100%;
+  content: "";
+  height: 100%;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.397);
 }
 
@@ -699,7 +703,7 @@ header .logo {
   padding: 10px 20px;
   margin-bottom: 15px;
 }
-.modal-body i{
+.modal-body i {
   color: var(--bg-color-0);
   padding-right: 10px;
 }
