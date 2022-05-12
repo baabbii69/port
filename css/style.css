@@ -709,7 +709,80 @@ header .logo {
 }
 
 /* --------------- Portfolio Section Styling --------------- */
-
+.portfolio-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+.portfolio-title {
+  padding-bottom: 1rem;
+}
+.filter-btn{
+  display: inline-block;
+  color: var(--bg-color-0);
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin-left: 1.3rem;
+  font-family: inherit;
+  text-transform: uppercase;
+}
+.portfolio-gallery{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.prt-card {
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: var(--bg-color-2);
+  height: 265px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.prt-image{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.prt-image img {
+  width:105%;
+}
+.prt-desc {
+  padding: 1.1rem 1.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+.prt-desc h3{
+  font-size: 0.95rem;
+  color:var(--bg-color-0-darkk);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.btn.secondary-btn.sm{
+  padding: 0.07rem 0.1rem;
+  font-size: 0.78rem;
+  border-bottom-width: 2px;
+}
+.btn.secondary-btn.sm::before{
+  height: 2px;
+  bottom: -2px;
+}
+.prt-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-color-transparent);
+}
 /* --------------- Testimonials Section Styling --------------- */
 
 /* --------------- Contact Section Styling --------------- */
