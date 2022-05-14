@@ -44,6 +44,9 @@ sr.reveal(".services-grid", { origin: "top", delay: 50 });
 sr.reveal(".services .sub-heading", { delay: 50 });
 sr.reveal(".services .heading", { delay: 50 });
 sr.reveal(".services .text", { delay: 50 });
+sr.reveal(".portfolio-header", { delay: 50 });
+sr.reveal(".portfolio-gallery", { delay: 50 })
+
 /* --------------- Skills Progress Bar Animation --------------- */
 function hasReached(el) {
     let topPosition = el.getBoundingClientRect().top;
