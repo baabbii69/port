@@ -9,14 +9,14 @@ const ms_section = document.querySelector(".milestones");
 const ms_counters = document.querySelectorAll(".number span");
 
 window.addEventListener("scroll", () => {
-    if(!skillsPlayed) skillscounter();
-    if(!msPlayed) ml_counter();
+    if (!skillsPlayed) skillscounter();
+    if (!msPlayed) ml_counter();
 })
 
-function updatecount(num, maxNum){
+function updatecount(num, maxNum) {
     let currentNum = +num.innerText;
 
-    if(currentNum < maxNum){
+    if (currentNum < maxNum) {
         num.innerText = currentNum + 1;
         setTimeout(() => {
             updatecount(num, maxNum);
@@ -24,8 +24,8 @@ function updatecount(num, maxNum){
     }
 }
 /* --------------- Sticky Navbar --------------- */
-function stickyNavbar(){
-    header.classList.toggle("scrolled", window.pageYOffset >100);
+function stickyNavbar() {
+    header.classList.toggle("scrolled", window.pageYOffset > 100);
 }
 stickyNavbar();
 window.addEventListener("scroll", stickyNavbar);
@@ -34,34 +34,34 @@ let sr = ScrollReveal({
     duration: 2500,
     distance: "60px",
 })
-sr.reveal(".showcase-info", {delay:500});
-sr.reveal(".showcase-image", {origin:"top", delay:600});
-sr.reveal(".about-grid", {origin:"top",delay:100});
-sr.reveal(".about-info", { delay:200});
-sr.reveal(".triangle", { delay:200});
-sr.reveal(".box-heading", { delay:50});
-sr.reveal(".services-grid", {origin:"top", delay:50});
-sr.reveal(".services .sub-heading", { delay:50});
-sr.reveal(".services .heading", { delay:50});
-sr.reveal(".services .text", { delay:50});
+sr.reveal(".showcase-info", { delay: 500 });
+sr.reveal(".showcase-image", { origin: "top", delay: 600 });
+sr.reveal(".about-grid", { origin: "top", delay: 100 });
+sr.reveal(".about-info", { delay: 200 });
+sr.reveal(".triangle", { delay: 200 });
+sr.reveal(".box-heading", { delay: 50 });
+sr.reveal(".services-grid", { origin: "top", delay: 50 });
+sr.reveal(".services .sub-heading", { delay: 50 });
+sr.reveal(".services .heading", { delay: 50 });
+sr.reveal(".services .text", { delay: 50 });
 /* --------------- Skills Progress Bar Animation --------------- */
-function hasReached(el){
+function hasReached(el) {
     let topPosition = el.getBoundingClientRect().top;
 
-    if(window.innerHeight >= topPosition + el.offsetHeight)  return true;
+    if (window.innerHeight >= topPosition + el.offsetHeight) return true;
     return false;
 }
 
 let skillsPlayed = false;
 
-function skillscounter(){
-    if(!hasReached(first_skill)) return;
+function skillscounter() {
+    if (!hasReached(first_skill)) return;
 
-    skillsPlayed  = true;
+    skillsPlayed = true;
 
-    sk_counter.forEach((counter, i)=>{
+    sk_counter.forEach((counter, i) => {
         let target = +counter.dataset.target;
-        let strokeValue = 427 - 427 * (target/100);
+        let strokeValue = 427 - 427 * (target / 100);
 
         progress_bars[i].style.setProperty("--target", strokeValue);
 
@@ -75,8 +75,9 @@ function skillscounter(){
 }
 /* --------------- Services Counter Animation --------------- */
 let msPlayed = false;
-function ml_counter(){
-    if(!hasReached(ms_section)) return;
+
+function ml_counter() {
+    if (!hasReached(ms_section)) return;
     msPlayed = true;
 
     ms_counters.forEach(ctr => {
@@ -92,14 +93,14 @@ function ml_counter(){
 const modals = document.querySelectorAll('.modal');
 const modalTitle = document.querySelector('.modal-header h1');
 const modalBody = document.querySelector('.modal-body ul');
-const closeBtns =  document.querySelectorAll('.modal-header button');
+const closeBtns = document.querySelectorAll('.modal-header button');
 const openBtns = document.querySelectorAll('.viewMore')
 
-function closeModals () {
+function closeModals() {
     modals.forEach((modal) => modal.classList.remove('toggleModal'))
-} 
+}
 
-closeBtns.forEach((btn, idx) => 
+closeBtns.forEach((btn, idx) =>
     btn.addEventListener('click', () => {
         closeModals()
         modals[idx].classList.remove('toggleModal')
@@ -107,7 +108,7 @@ closeBtns.forEach((btn, idx) =>
 
 
 openBtns.forEach((btn, idx) => {
-    btn.addEventListener('click', (e) =>  {
+    btn.addEventListener('click', (e) => {
         e.preventDefault()
         closeModals()
         modals[idx].classList.add('toggleModal')
@@ -117,6 +118,14 @@ openBtns.forEach((btn, idx) => {
 
 
 /* --------------- Portfolio Filter Animation --------------- */
+let mixer = mixitup('.portfolio-gallery', {
+    selectors: {
+        target: '.prt-card',
+    },
+    animation: {
+        duration: 500,
+    },
+});
 
 /* --------------- Modal Pop Up Animation Animation --------------- */
 
