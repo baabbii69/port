@@ -8,6 +8,13 @@ const progress_bars = document.querySelectorAll(".skills svg circle");
 const ms_section = document.querySelector(".milestones");
 const ms_counters = document.querySelectorAll(".number span");
 
+const prt_section = document.querySelector(".portfolio");
+const zoom_icons = document.querySelectorAll(".zoom-icon");
+const modal_overlay = document.querySelector(".modal-overlay");
+const images = document.querySelectorAll(".images img");
+const prev_btn = document.querySelector(".prev-btn");
+const next_btn = document.querySelector(".next-btn");
+
 window.addEventListener("scroll", () => {
     if (!skillsPlayed) skillscounter();
     if (!msPlayed) ml_counter();
@@ -93,10 +100,10 @@ function ml_counter() {
 }
 
 // modal
-const modals = document.querySelectorAll('.modal');
-const modalTitle = document.querySelector('.modal-header h1');
-const modalBody = document.querySelector('.modal-body ul');
-const closeBtns = document.querySelectorAll('.modal-header button');
+const modals = document.querySelectorAll('.modall');
+const modalTitle = document.querySelector('.modall-header h1');
+const modalBody = document.querySelector('.modall-body ul');
+const closeBtns = document.querySelectorAll('.modall-header button');
 const openBtns = document.querySelectorAll('.viewMore')
 
 function closeModals() {
@@ -131,7 +138,38 @@ let mixer = mixitup('.portfolio-gallery', {
 });
 
 /* --------------- Modal Pop Up Animation Animation --------------- */
+let currentIndex = 0;
+zoom_icons.forEach((icn, i) => icn.addEventListener("click", () => {
+    prt_section.classList.add("open");
+    document.body.classList.add("stopScrolling");
+    currentIndex = i;
+    changeImage(currentIndex);
+}));
+modal_overlay.addEventListener("click", () => {
+    prt_section.classList.remove("open");
+    document.body.classList.remove("stopScrolling");
+});
+prev_btn.addEventListener("click", () => {
+    if (currentIndex === 0) {
+        currentIndex = 5;
+    } else {
+        currentIndex--;
+    }
+    changeImage(currentIndex);
+});
+next_btn.addEventListener("click", () => {
+    if (currentIndex === 5) {
+        currentIndex = 0;
+    } else {
+        currentIndex++;
+    }
+    changeImage(currentIndex);
+});
 
+function changeImage(index) {
+    images.forEach(img => img.classList.remove("showImage"));
+    images[index].classList.add("showImage");
+}
 /* --------------- Modal Pop Up Animation Animation --------------- */
 
 /* --------------- Change Active Link On Scroll --------------- */
