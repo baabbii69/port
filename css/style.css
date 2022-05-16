@@ -204,8 +204,8 @@ ul {
 }
 
 .triangle {
-    width: 95px;
-    opacity: 0.18;
+    width: 100px;
+    opacity: 0.2;
 }
 
 
@@ -246,12 +246,12 @@ header .logo {
 .logo img {
     margin-right: 1rem;
     /* height: 60px; */
-    top: 5rem;
+    top: 0;
 }
 
 .logo img.logoo {
     /* padding-top: 20px; */
-    width: 35px;
+    width: 40px;
     object-fit: contain;
 }
 
@@ -504,6 +504,7 @@ header .logo {
     left: 90%;
     top: 20%;
     transform: translate(-50%, -50%);
+    width: 130px;
 }
 
 
@@ -544,8 +545,8 @@ header .logo {
 
 .skills .triangle {
     position: absolute;
-    width: 60px;
-    left: 96%;
+    width: 90px;
+    left: 94%;
     top: 9%;
     transform: translate(-50%, -50%);
     z-index: 1;
