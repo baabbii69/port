@@ -783,11 +783,11 @@
                     <p class="text">Lorem ipsum dolor sit amet consectetuiam beatae vero fugiat nisi exercitationem consequuntur.</p>
                     <a href="mailto:pianodesign0@gmail.com" target="_blank" class="mail">pianodesign0@gmail.com <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <form action="index.html" class="contact-form" onsubmit="sendEmail(); reset(); return false;">
+                <form action="https://formsubmit.co/pianodesign0@gmail.com" method="POST" class="contact-form">
                     <h3>Send Me a Message</h3>
-                    <input type="text" id="name" class="form-input" placeholder="Your Name" required>
-                    <input type="email" id="email" class="form-input" placeholder="Your Email" required>
-                    <textarea id="message" placeholder="Project Details" class="form-input" required></textarea>
+                    <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+                    <input type="email" name="email" class="form-input" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Project Details" class="form-input" required></textarea>
                     <input type="submit" value="Send" class="btn">
                 </form>
             </div>
