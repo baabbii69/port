@@ -33,6 +33,8 @@ body {
 
 body.dark {
     --bg-color: hsl(var(--hue-1), 19%, 15%);
+    --bg-color-0-darkk: #003030;
+    --bg-color-0-darkkk: #202020;
     --bg-color-1: hsl(var(--hue-1), 21%, 11%);
     --bg-color-2: hsl(var(--hue-1), 23%, 19%);
     --bg-color-3: hsl(var(--hue-1), 23%, 24%);
