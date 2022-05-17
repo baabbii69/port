@@ -182,6 +182,16 @@ const swiper = new Swiper('.swiper', {
     },
 });
 /* --------------- contact mail -----------------------*/
+// const inputFields = document.querySelectorAll('.form-input');
+// const contactForm = document.querySelector('.contact-form');
+
+// contactForm.addEventListener('submit', onSubmit);
+
+// function onSubmit(e) {
+//     // e.preventDefault();
+//     inputFields.forEach(i => i.value = '')
+// }
+
 // const form = document.querySelector('.contact-form'),
 //     name = document.querySelector('#name'),
 //     email = document.querySelector('#email'),
