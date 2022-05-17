@@ -181,6 +181,22 @@ const swiper = new Swiper('.swiper', {
         clickable: true,
     },
 });
+/* --------------- contact mail -----------------------*/
+function sendEmail() {
+    Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "joealex69420@gmail.com",
+        Password: "1E13B045E4CD2463EDB776F2477BC6BEDED8",
+        To: 'pianodesign0@gmail.com',
+        From: document.getElementById("email").value,
+        Subject: "New Work Request",
+        Body: "Name: " + document.getElementById("name").value +
+            "<br> Email: " + document.getElementById("email").value +
+            "<br> message: " + document.getElementById("message").value
+    }).then(
+        message => alert(message)
+    );
+}
 /* --------------- Change Active Link On Scroll --------------- */
 
 /* --------------- Change Page Theme --------------- */
