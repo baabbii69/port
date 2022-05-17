@@ -15,7 +15,10 @@ const images = document.querySelectorAll(".images img");
 const prev_btn = document.querySelector(".prev-btn");
 const next_btn = document.querySelector(".next-btn");
 
+const links = document.querySelectorAll(".nav-link");
+
 window.addEventListener("scroll", () => {
+    activeLink();
     if (!skillsPlayed) skillscounter();
     if (!msPlayed) ml_counter();
 })
@@ -213,6 +216,23 @@ const swiper = new Swiper('.swiper', {
 //     );
 // }
 /* --------------- Change Active Link On Scroll --------------- */
+function activeLink() {
+    let sections = document.querySelectorAll("section[id]");
+    let passedSections = Array.from(sections).map((sct, i) => {
+            return {
+                y: sct.getBoundingClientRect().top - header.offsetHeight,
+                id: i,
+            };
+        })
+        .filter((sct) => sct.y <= 0);
+
+    let currSectionID = passedSections.at(-1).id;
+
+    console.log(links);
+    links.forEach((l) => l.classList.remove("active"));
+    links[currSectionID].classList.add("active");
+}
+activeLink();
 
 /* --------------- Change Page Theme --------------- */
 

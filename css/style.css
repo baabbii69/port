@@ -14,6 +14,10 @@
     --section-padding: 7rem;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     --bg-color-0: #039797;
     --bg-color-0-dark: #014e4e;
@@ -148,7 +152,6 @@ ul {
     text-align: center;
     text-transform: capitalize;
     cursor: pointer;
-    box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
 }
 
@@ -334,11 +337,13 @@ header .logo {
     transition: 0.3s;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: var(--heading-color--);
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
     opacity: 0.2;
 }
@@ -1253,6 +1258,38 @@ textarea.form-input {
 
 
 /* --------------- Footer Styling --------------- */
+
+footer {
+    padding: 4rem 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .social-media {
+    display: flex;
+}
+
+.social-link {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 1rem;
+    background-color: var(--bg-color-1);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.social-link:hover {
+    color: var(--bg-color-0);
+}
 
 
 /* --------------- 1000px Screens --------------- */
